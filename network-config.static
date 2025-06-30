@@ -1,0 +1,25 @@
+#cloud-config
+network:
+    version: 2
+    ethernets:
+      enp1s0:
+        dhcp4: no
+        dhcp6: no
+        routes:
+        - to: default
+          via: 10.0.0.1 
+    bridges:
+        br0:
+            addresses:
+            - 10.0.0.111/24
+            interfaces:
+              - enp1s0
+            gateway4: 10.0.0.1
+            nameservers:
+              addresses: 
+              - 75.75.75.75
+            parameters:
+              forward-delay: 0
+              stp: false
+            optional: true
+
