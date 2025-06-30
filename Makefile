@@ -47,7 +47,10 @@ mindisks:
 	qemu-img create -f qcow2 -F qcow2 -b ./ubuntu-24.04-minimal-cloudimg-amd64.img ./rootfs.qcow2
 	qemu-img resize ./rootfs.qcow2 $(ROOTSIZE)G
 
-getminimage: $(MAXNAME)
+getminimage: $(MINNAME)
+	echo "minname: $(MINIMAGE)"
+
+$(MINNAME):
 	wget $(MINIMAGE)
 
 rootfs.qcow2:
