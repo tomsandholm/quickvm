@@ -45,6 +45,7 @@ packages:
   - qemu-user-static
   - cpu-checker
   - gh
+  - vim
 
 #BOOTCMD
 bootcmd:
