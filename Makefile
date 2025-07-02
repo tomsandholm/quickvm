@@ -74,7 +74,8 @@ getimagemin:
 ## create a node using virt-install
 node:   
 	@:$(call check_defined,NAME)
-	make maxdisks
+	#make maxdisks
+	make mindisks
 	make datadisk
 	make swapdisk
 	make xtradisk
