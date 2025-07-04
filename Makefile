@@ -96,7 +96,7 @@ node:
 	virsh start $(SNAME)
 
 Delete:
-	virsh destroy $(SNAME)
+	virsh destroy $(SNAME) || @echo "vm $(SNAME) was not running"
 	virsh undefine $(SNAME)
 	rm -rf ./rootfs.qcow2
 
