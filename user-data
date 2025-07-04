@@ -4,6 +4,11 @@ autoinstall:
 disable_root: 0
 ssh_pwauth: 1
 
+apt:
+  http_proxy: "http://10.0.0.193:3128"
+  https_proxy: "http://10.0.0.193:3128"
+  ftp_proxy: "http://10.0.0.193:3128"
+
 write_files:
   - path: /etc/tom
     content: |
