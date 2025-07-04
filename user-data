@@ -45,7 +45,6 @@ packages:
   - libvirt-clients
   - bridge-utils
   - virt-manager
-  - qemu
   - binfmt-support
   - qemu-user-static
   - cpu-checker
