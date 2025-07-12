@@ -100,3 +100,13 @@ Delete:
 	virsh undefine $(SNAME)
 	rm -rf ./rootfs.qcow2
 
+
+list:
+	@virsh list --all
+
+netlist:
+	@virsh net-list
+
+dhcplist:
+	@make netlist
+	@virsh -q net-list | awk '{print $$1}' | xargs -n1 virsh net-dhcp-leases

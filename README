@@ -1,0 +1,11 @@
+Description:  Tool to build kvm virtual node using cloud-init with virt-install.
+
+To make a vm:
+
+  $  make -e NAME=<nodename> node
+
+To delete a vm:
+ 
+  $  make -e NAME=<nodename> Delete
+
+
